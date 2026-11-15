@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>峰行 PeakGo 隐私政策</title>
+<style>
+  :root {
+    --bg: #f6f8f9; --panel: #ffffff; --text: #12191f; --muted: #566773;
+    --accent: #0b7e6e; --rule: #dfe6ea;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #060a0f; --panel: #0e1620; --text: #eef6f4; --muted: #9dafbb;
+      --accent: #3ee6c4; --rule: #1b2530;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 32px 20px 80px; background: var(--bg); color: var(--text);
+    font: 16px/1.8 -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
+          "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    -webkit-text-size-adjust: 100%;
+  }
+  main { max-width: 720px; margin: 0 auto; }
+  .card { background: var(--panel); border: 1px solid var(--rule); border-radius: 14px; padding: 28px 26px; }
+  h1 { font-size: 25px; line-height: 1.35; margin: 0 0 6px; }
+  h2 { font-size: 17.5px; margin: 30px 0 8px; }
+  h2:first-of-type { margin-top: 22px; }
+  p, li { margin: 8px 0; }
+  ul { padding-left: 22px; }
+  .meta { color: var(--muted); font-size: 14px; margin: 0 0 4px; }
+  .lead { border-left: 3px solid var(--accent); padding: 2px 0 2px 14px; margin: 20px 0; }
+  table { width: 100%; border-collapse: collapse; font-size: 14.5px; margin: 10px 0; }
+  th, td { border: 1px solid var(--rule); padding: 8px 10px; text-align: left; vertical-align: top; }
+  th { background: rgba(127, 127, 127, 0.08); font-weight: 600; }
+  hr { border: 0; border-top: 1px solid var(--rule); margin: 44px 0; }
+  a { color: var(--accent); }
+  code { background: var(--bg); border: 1px solid var(--rule); border-radius: 5px; padding: 1px 5px; font-size: 14px; }
+  footer { color: var(--muted); font-size: 14px; margin-top: 26px; }
+</style>
+</head>
+<body>
+<main>
+  <div class="card">
+
+    <h1>峰行（PeakGo）隐私政策</h1>
+    <p class="meta">适用应用：峰行 / PeakGo（Android，包名 <code>top.cygnusyang.peakgo</code>）</p>
+    <p class="meta">运营者：该应用的个人开发者 · 联系方式：<a href="mailto:ruohuyang@gmail.com">ruohuyang@gmail.com</a></p>
+    <p class="meta">生效日期：2026 年 11 月 15 日 · 版本：v1</p>
+
+    <p class="lead">
+      一句话：<strong>峰行不收集你的任何个人信息。</strong>
+      应用不申请网络权限，没有服务器、没有账号体系、没有第三方统计与广告组件，
+      所有读数与照片都只留在你自己的手机上。
+    </p>
+
+    <h2>一、我们是否收集个人信息</h2>
+    <p>
+      不收集。峰行的 Android 安装包<strong>未声明 <code>INTERNET</code> 权限</strong>，
+      这意味着应用在系统层面不具备联网能力，无法把任何数据发送到设备之外——包括我们自己。
+      我们不运营接收用户数据的服务端，也不使用需要上传数据的第三方服务。
+    </p>
+
+    <h2>二、权限清单与用途</h2>
+    <table>
+      <tr>
+        <th style="width:26%">权限</th>
+        <th>用途</th>
+        <th style="width:30%">拒绝后的影响</th>
+      </tr>
+      <tr>
+        <td>位置信息（精确位置 / 大致位置）</td>
+        <td>计算海拔、显示经纬度、计算真北所需的磁偏角，以及在你使用水印相机时写入照片的坐标字段</td>
+        <td>海拔与坐标显示为「不可估」，指南针退回磁北，其余功能正常</td>
+      </tr>
+      <tr>
+        <td>相机</td>
+        <td>仅在你进入「水印相机」时用于取景与拍照</td>
+        <td>相机页提示未授权并提供前往系统设置的入口，其余功能正常</td>
+      </tr>
+    </table>
+    <p>
+      两项权限都在你使用对应功能时申请，不会在首次启动、未取得你同意前申请。
+      首次启动时应用会展示本政策的摘要并征求你的明示同意；你不同意时，
+      应用不会申请任何权限，也不会开始任何传感器采集。
+    </p>
+    <p>
+      位置信息仅在你使用期间获取，不申请后台定位，不保存历史轨迹，不建立位置记录文件。
+    </p>
+
+    <h2>三、数据保存位置与期限</h2>
+    <ul>
+      <li>你的偏好设置（单位、主题、语言）与海拔校准参数，保存在应用私有目录，仅本机可读。</li>
+      <li>你拍摄的照片，由系统相册保存到你的设备相册。</li>
+      <li>气压趋势数据只存在于内存中，应用退出即释放，不写入磁盘。</li>
+      <li>以上数据不会上传，也不存在「保存期限」问题：卸载应用即清除应用私有目录下的全部数据，照片由你自行在相册中管理。</li>
+    </ul>
+
+    <h2>四、第三方共享、转让与公开披露</h2>
+    <p>
+      不存在。应用未集成任何第三方 SDK（统计分析、崩溃上报、广告、推送、社交分享均无），
+      因此没有可共享的数据，也没有需要披露的接收方。
+    </p>
+
+    <h2>五、数据出境</h2>
+    <p>
+      不存在。应用不联网，设备上的数据不向任何境外或境内服务器传输。
+    </p>
+
+    <h2>六、未成年人保护</h2>
+    <p>
+      峰行是户外读数工具，不面向儿童设计，也不收集任何人的个人信息（包括未成年人的）。
+      若未成年人使用本应用，请在监护人指导下进行户外活动。
+    </p>
+
+    <h2>七、你的权利</h2>
+    <ul>
+      <li><strong>查询与更正</strong>：应用内不保存你的个人信息，设备上的单位、语言、校准参数可在应用内随时查看与修改。</li>
+      <li><strong>删除</strong>：在系统设置中清除应用数据，或卸载应用，即可删除全部本机数据；照片请在系统相册中自行删除。</li>
+      <li><strong>撤回授权</strong>：可在系统「设置 → 应用 → 峰行 → 权限」中随时关闭定位或相机权限，关闭后对应功能降级，其余功能不受影响。</li>
+      <li><strong>联系我们</strong>：对上述任一项有疑问，可写信到 <a href="mailto:ruohuyang@gmail.com">ruohuyang@gmail.com</a>。</li>
+    </ul>
+
+    <h2>八、APP 备案说明</h2>
+    <p>
+      峰行为不提供互联网信息服务的单机应用：安装包不含网络访问权限，全部功能在设备本地完成，
+      无服务端接口、无域名依赖。按现行备案口径，此类单机应用不由主办者办理 APP 备案。
+      若后续版本引入任何联网功能，我们会在功能上线前完成相应备案手续，
+      并在本页与应用内「设置」中公示备案编号。
+    </p>
+
+    <h2>九、本政策的更新</h2>
+    <p>
+      本政策如发生变更，会在应用新版本发布前更新本页，并在应用内以显著方式提示。
+      若变更涉及新增权限或新增数据用途，会在你确认新版本政策后才生效。
+    </p>
+
+    <h2>十、联系我们</h2>
+    <p>
+      运营者：该应用的个人开发者<br>
+      联系邮箱：<a href="mailto:ruohuyang@gmail.com">ruohuyang@gmail.com</a><br>
+      我们会在收到你的问题后尽快答复。
+    </p>
+
+    <hr>
+
+    <h1 lang="en">PeakGo Privacy Policy</h1>
+    <p class="meta" lang="en">Applies to PeakGo (Android, package <code>top.cygnusyang.peakgo</code>) · Effective 15 November 2026</p>
+
+    <div class="lead" lang="en">
+      In one sentence: <strong>PeakGo collects no personal information.</strong>
+      The app declares no <code>INTERNET</code> permission and has no server, no account system and no
+      third-party analytics or advertising SDKs. Every reading and photo stays on your phone.
+    </div>
+
+    <h2 lang="en">1. Collection</h2>
+    <p lang="en">
+      None. Because the package declares no <code>INTERNET</code> permission, the app cannot send data off
+      the device at the operating-system level. There is no backend that receives user data and no
+      third-party service that requires uploading.
+    </p>
+
+    <h2 lang="en">2. Permissions and purposes</h2>
+    <ul lang="en">
+      <li><strong>Location (precise / approximate)</strong> — altitude, coordinates, magnetic declination for true north,
+        and the coordinate field in watermarked photos. Requested while you use the feature; no background
+        location, no location history.</li>
+      <li><strong>Camera</strong> — requested only when you open the watermark camera, for preview and shutter.</li>
+    </ul>
+    <p lang="en">
+      On first launch the app shows a summary of this policy and asks for your explicit consent before
+      requesting any permission or starting any sensor.
+    </p>
+
+    <h2 lang="en">3. Storage, sharing, transfers</h2>
+    <p lang="en">
+      Preferences and calibration values live in the app's private directory; photos go to your device
+      gallery through the system media store; pressure trend data exists only in memory. Nothing is
+      shared, sold, transferred or exported — there is no channel for it. Uninstalling the app removes
+      its private data.
+    </p>
+
+    <h2 lang="en">4. Your rights and contact</h2>
+    <p lang="en">
+      Clear the app's data or uninstall to delete everything; revoke permissions in system settings at any
+      time. Questions: <a href="mailto:ruohuyang@gmail.com">ruohuyang@gmail.com</a>.
+    </p>
+
+    <footer>峰行 · PeakGo — 户外读数工具 / outdoor reading instrument</footer>
+  </div>
+</main>
+</body>
+</html>

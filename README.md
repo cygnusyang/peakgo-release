@@ -2,10 +2,14 @@
 
 PeakGo（峰行）Android 版对外的静态页面仓库。
 
-目前只有隐私政策：
+目前只有隐私政策（中英双语版给 Google Play，简体中文版给国内商店）：
 
 - <https://cygnusyang.github.io/peakgo-release/> — Google Play 商店「隐私政策」字段填这一条
 - <https://cygnusyang.github.io/peakgo-release/privacy/> — 同一页的固定路径别名
+国内应用商店填下面这条（简体中文版，含运营者主体、权限清单与备案说明）：
+
+- <https://cygnusyang.github.io/peakgo-release/cn/>
+
 
 页面为单文件、零外部依赖（无 CDN、无字体、无统计），跟随系统深浅色。改文案只需改 `index.html` 与 `privacy/index.html`（两处同内容），提交后 GitHub Pages 自动重建。
 
